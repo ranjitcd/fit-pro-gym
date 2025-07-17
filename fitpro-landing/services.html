@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>FitPro Gym - Services</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    body {
+      background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
+      color: white;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 2rem;
+      background-color: rgba(0, 0, 0, 0.7);
+    }
+
+    .logo {
+      height: 50px;
+    }
+
+    nav ul {
+      display: flex;
+      gap: 2rem;
+      list-style: none;
+    }
+
+    nav ul li a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    main {
+      flex: 1;
+      padding: 2rem;
+      text-align: center;
+    }
+
+    main h1 {
+      font-size: 3rem;
+      margin-bottom: 3rem;
+    }
+
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 2.5rem;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .service-card {
+      background: rgba(255, 255, 255, 0.08);
+      border-radius: 16px;
+      padding: 2rem;
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
+      transition: all 0.3s ease;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .service-card:hover {
+      transform: translateY(-8px) scale(1.02);
+      background: rgba(255, 255, 255, 0.12);
+    }
+
+    .service-card h2 {
+      font-size: 1.6rem;
+      margin-bottom: 1rem;
+    }
+
+    .service-card .emoji {
+      font-size: 2.5rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .service-card p {
+      font-size: 1rem;
+      line-height: 1.6;
+      color: #e0e0e0;
+    }
+
+    footer {
+      background-color: rgba(0, 0, 0, 0.9);
+      padding: 2rem;
+      text-align: center;
+      font-size: 0.95rem;
+    }
+
+    footer p {
+      margin-bottom: 0.5rem;
+    }
+
+    /* Optional: Whatsapp floating button */
+    .whatsapp-button {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background-color: #25D366;
+      border-radius: 50%;
+      width: 60px;
+      height: 60px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+      z-index: 999;
+      transition: transform 0.2s ease;
+    }
+
+    .whatsapp-button:hover {
+      transform: scale(1.1);
+    }
+
+    .whatsapp-button img {
+      width: 30px;
+      height: 30px;
+    }
+    
+  </style>
+</head>
+
+<body>
+  <header>
+    <img src="/public/logo.png" alt="FitPro Gym Logo" class="logo" />
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <h1>Our Premium Services</h1>
+    <div class="services-grid">
+      <div class="service-card">
+        <div class="emoji">💪</div>
+        <h2>Personal Training</h2>
+        <p>One-on-one coaching with certified trainers focused on your goals. Custom plans, real results, and accountability every step of the way.</p>
+      </div>
+      <div class="service-card">
+        <div class="emoji">📋</div>
+        <h2>Workout Plans</h2>
+        <p>Choose from a variety of structured programs for fat loss, strength, or muscle gain. Updated weekly for consistent progress.</p>
+      </div>
+      <div class="service-card">
+        <div class="emoji">🥗</div>
+        <h2>Nutrition Guidance</h2>
+        <p>Diet plans tailored to your body type and goals. Includes macro tracking, supplement suggestions, and habit-building techniques.</p>
+      </div>
+      <div class="service-card">
+        <div class="emoji">📈</div>
+        <h2>Progress Tracking</h2>
+        <p>Track body metrics, workout history, and improvements through our app. Visual dashboards help you stay motivated.</p>
+      </div>
+      <div class="service-card">
+        <div class="emoji">🧘</div>
+        <h2>Yoga & Mobility</h2>
+        <p>Enhance flexibility and reduce injury risk with guided yoga, stretching, and recovery sessions every week.</p>
+      </div>
+      <div class="service-card">
+        <div class="emoji">🤝</div>
+        <h2>Group Classes</h2>
+        <p>Fun and energetic group sessions including HIIT, Zumba, strength circuits, and bootcamps for all levels.</p>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <p><strong>FitPro Gym</strong></p>
+    <p>10, T.P. Kailsasam Road, Hanumanthangara, Bengaluru, 560019</p>
+    <p>Owner: Ranjit</p>
+    <p>Phone: +91 8618030423</p>
+    <p>Email: ranjitcd426@gmail.com</p>
+  </footer>
+
+  <!-- Floating WhatsApp Button -->
+  <a class="whatsapp-button" href="https://wa.me/918618030423?text=Hi%20FitPro%20Gym!%20I%20want%20to%20know%20more%20about%20your%20services." target="_blank">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" />
+  </a>
+</body>
+</html>

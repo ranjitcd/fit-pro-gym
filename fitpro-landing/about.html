@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>About - FitPro Gym</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    body {
+      background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
+      color: white;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 2rem;
+      background-color: rgba(0, 0, 0, 0.7);
+    }
+
+    .logo {
+      height: 50px;
+    }
+
+    nav ul {
+      display: flex;
+      gap: 2rem;
+      list-style: none;
+    }
+
+    nav ul li a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    main {
+      flex: 1;
+      padding: 3rem 2rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+
+    main h1 {
+      font-size: 2.8rem;
+      margin-bottom: 1rem;
+    }
+
+    main p {
+      font-size: 1.2rem;
+      max-width: 900px;
+      margin-bottom: 1.5rem;
+      line-height: 1.6;
+    }
+
+    .highlight {
+      color: #00ffd5;
+      font-weight: bold;
+    }
+
+    /* OUR TEAM */
+    .team-section {
+      margin-top: 3rem;
+      text-align: center;
+    }
+
+    .team-section h2 {
+      font-size: 2rem;
+      margin-bottom: 2rem;
+      color: #00ffd5;
+    }
+
+    .team-grid {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 2rem;
+    }
+
+    .team-member {
+      background: rgba(255, 255, 255, 0.05);
+      padding: 1.5rem;
+      border-radius: 10px;
+      width: 250px;
+      transition: transform 0.3s;
+    }
+
+    .team-member:hover {
+      transform: scale(1.05);
+    }
+
+    .team-member img {
+      border-radius: 50%;
+      width: 100px;
+      height: 100px;
+      object-fit: cover;
+      margin-bottom: 1rem;
+    }
+
+    .team-member h3 {
+      font-size: 1.2rem;
+      margin-bottom: 0.3rem;
+    }
+
+    .team-member p {
+      font-size: 0.95rem;
+      opacity: 0.8;
+    }
+
+    /* TIMELINE */
+    .timeline {
+      margin-top: 4rem;
+      max-width: 700px;
+      border-left: 3px solid #00ffd5;
+      padding-left: 2rem;
+      position: relative;
+      animation: fadeIn 1s ease-in-out;
+    }
+
+    .timeline::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: -7px;
+      width: 14px;
+      height: 14px;
+      background: #00ffd5;
+      border-radius: 50%;
+    }
+
+    .timeline h2 {
+      color: #00ffd5;
+      margin-bottom: 1.5rem;
+      font-size: 2rem;
+    }
+
+    .timeline-item {
+      margin-bottom: 2rem;
+      position: relative;
+    }
+
+    .timeline-item::before {
+      content: '⏳';
+      position: absolute;
+      left: -2.2rem;
+      font-size: 1.2rem;
+    }
+
+    .timeline-item h3 {
+      font-size: 1.1rem;
+      color: #fff;
+    }
+
+    .timeline-item p {
+      font-size: 0.95rem;
+      opacity: 0.85;
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    footer {
+      background-color: rgba(0, 0, 0, 0.9);
+      padding: 2rem;
+      text-align: center;
+      font-size: 0.95rem;
+      margin-top: auto;
+    }
+
+    footer p {
+      margin-bottom: 0.5rem;
+    }
+    .whatsapp-button {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background-color: #25D366;
+      border-radius: 50%;
+      width: 60px;
+      height: 60px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+      z-index: 999;
+      transition: transform 0.2s ease;
+    }
+
+    .whatsapp-button:hover {
+      transform: scale(1.1);
+    }
+
+    .whatsapp-button img {
+      width: 30px;
+      height: 30px;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <img src="/public/logo.png" alt="FitPro Gym Logo" class="logo" />
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <h1>About FitPro Gym</h1>
+    <p><span class="highlight">FitPro Gym</span> helps gyms and members thrive with a modern platform to manage workouts, trainers, and subscriptions seamlessly.</p>
+    <p>We’re committed to building a fitness ecosystem that’s <strong>smart, community-driven</strong>, and accessible to all.</p>
+
+    <!-- TIMELINE -->
+    <div class="timeline">
+      <h2>Our Mission Timeline</h2>
+      <div class="timeline-item">
+        <h3>🚀 Launch in Bengaluru (2025)</h3>
+        <p>We started with a mission to digitize gyms and make trainer-member interactions seamless.</p>
+      </div>
+      <div class="timeline-item">
+        <h3>📈 Empower 100+ Gyms</h3>
+        <p>Goal to onboard 100+ gyms across India with personalized tools and UPI-based billing.</p>
+      </div>
+      <div class="timeline-item">
+        <h3>🌍 Community Building</h3>
+        <p>Plan to build a connected fitness community with challenges, progress tracking, and social fitness goals.</p>
+      </div>
+    </div>
+
+    <!-- TEAM -->
+    <section class="team-section">
+      <h2>Meet Our Team</h2>
+      <div class="team-grid">
+        <div class="team-member">
+          <img src="/public/Ranjit1.webp" alt="Ranjit">
+          <h3>Ranjit</h3>
+          <p>Founder & Full-stack Developer</p>
+        </div>
+        <div class="team-member">
+          <img src="/public/coach.webp" alt="Coach">
+          <h3>Deepak</h3>
+          <p>Lead Fitness Coach</p>
+        </div>
+        <div class="team-member">
+          <img src="/public/anusha.webp" alt="Designer">
+          <h3>Anusha</h3>
+          <p>UI/UX & Branding</p>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer id="contact">
+    <p><strong>FitPro Gym</strong></p>
+    <p>10, T.P. Kailsasam Road, Hanumanthangara, Bengaluru, 560019</p>
+    <p>Owner: Ranjit</p>
+    <p>Phone: +91 8618030423</p>
+    <p>Email: ranjitcd426@gmail.com</p>
+  </footer>
+ <a class="whatsapp-button" href="https://wa.me/918618030423?text=Hi%20FitPro%20Gym!%20I%20want%20to%20know%20more%20about%20your%20services." target="_blank">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" />
+  </a>
+</body>
+</html>
