@@ -1,222 +1,351 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>FitPro Gym</title>
-  <meta name="facebook-domain-verification" content="9uyq3w10ejevc5b8q36sm0ej2dztdr" />
-  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    }
-
-    body {
-      background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
-      color: white;
-      display: flex;
-      flex-direction: column;
-      min-height: 100vh;
-    }
-
-    header {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 1rem 2rem;
-      background-color: rgba(0, 0, 0, 0.7);
-      position: sticky;
-      top: 0;
-      z-index: 10;
-    }
-
-    .logo {
-      height: 50px;
-    }
-
-    nav ul {
-      display: flex;
-      gap: 2rem;
-      list-style: none;
-    }
-
-    nav ul li a {
-      color: white;
-      text-decoration: none;
-      font-weight: bold;
-      transition: color 0.3s;
-    }
-
-    nav ul li a:hover {
-      color: #00ffd5;
-    }
-
-    main {
-      flex: 1;
-      padding: 2rem;
-      text-align: center;
-    }
-
-    .hero {
-      margin-top: 2rem;
-      margin-bottom: 3rem;
-    }
-
-    .hero h1 {
-      font-size: 3.5rem;
-      margin-bottom: 1rem;
-      animation: fadeInDown 1s ease;
-    }
-
-    .hero p {
-      font-size: 1.3rem;
-      max-width: 800px;
-      margin: 0 auto 2rem;
-    }
-
-    .cta-button {
-      padding: 0.8rem 2rem;
-      font-size: 1rem;
-      background-color: #00ffd5;
-      color: #000;
-      border: none;
-      border-radius: 8px;
-      cursor: pointer;
-      font-weight: bold;
-      transition: background-color 0.3s;
-    }
-
-    .cta-button:hover {
-      background-color: #00cfa2;
-    }
-
-    .screenshots {
-      display: flex;
-      gap: 1rem;
-      flex-wrap: wrap;
-      justify-content: center;
-      margin-top: 2rem;
-    }
-
-    .screenshot {
-      max-width: 250px;
-      width: 100%;
-      border: 3px solid #fff;
-      border-radius: 12px;
-      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
-      transition: transform 0.3s;
-    }
-
-    .screenshot:hover {
-      transform: scale(1.05);
-    }
-
-    #about-business {
-      background: rgba(255, 255, 255, 0.1);
-      padding: 3rem 1rem;
-      margin-top: 4rem;
-      border-radius: 10px;
-      max-width: 1000px;
-      margin-left: auto;
-      margin-right: auto;
-    }
-
-    #about-business h2 {
-      font-size: 2.5rem;
-      margin-bottom: 1rem;
-    }
-
-    #about-business p {
-      font-size: 1.1rem;
-      max-width: 900px;
-      margin: auto;
-      line-height: 1.6;
-    }
-
-    footer {
-      background-color: rgba(0, 0, 0, 0.9);
-      padding: 2rem;
-      text-align: center;
-      font-size: 0.95rem;
-    }
-
-    footer p {
-      margin-bottom: 0.5rem;
-    }
-
-    @keyframes fadeInDown {
-      from {
-        opacity: 0;
-        transform: translateY(-40px);
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FitPro Gym</title>
+    <meta
+      name="facebook-domain-verification"
+      content="9uyq3w10ejevc5b8q36sm0ej2dztdr"
+    />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
       }
-      to {
-        opacity: 1;
-        transform: translateY(0);
+
+      body {
+        background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
+        color: white;
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh;
       }
-    }
-  </style>
-</head>
-<body>
-  <header>
-    <img src="/public/logo.png" alt="FitPro Gym Logo" class="logo" />
-    <nav>
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="services.html">Services</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="contact.html">Contact</a></li>
-      </ul>
-    </nav>
-  </header>
 
-  <main>
-    <section class="hero" data-aos="fade-up">
-      <h1>Welcome to FitPro Gym</h1>
-      <p>
-        Transform your fitness journey with smart tools, expert guidance, and a supportive community.
-        FitPro Gym empowers members, trainers, and admins through our all-in-one fitness platform.
-      </p>
-      <button class="cta-button" onclick="window.location.href='contact.html'">Join Now</button>
-    </section>
+      header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 1rem 2rem;
+        background-color: rgba(0, 0, 0, 0.7);
+        position: sticky;
+        top: 0;
+        z-index: 10;
+      }
 
-    <section class="screenshots" data-aos="zoom-in-up">
-      <img src="/public/app_1.png" alt="Screenshot 1" class="screenshot" />
-      <img src="/public/app_2.png" alt="Screenshot 2" class="screenshot" />
-      <img src="/public/app_3.png" alt="Screenshot 3" class="screenshot" />
-      <img src="/public/app_4.png" alt="Screenshot 4" class="screenshot" />
-    </section>
+      .logo {
+        height: 50px;
+      }
 
-    <section id="about-business" data-aos="fade-up">
-      <h2>About FitPro Gym</h2>
-      <p>
-        FitPro Gym is a Bangalore-based fitness platform dedicated to transforming lives through personalized training, member-focused dashboards, and trainer-admin tools.
-        Located at <strong>10, T.P. Kailasam Road, Hanumanthnagar, Bangalore - 560019</strong>, we are committed to promoting health, strength, and community.
-        Our app allows members to track their progress, access workouts, and stay connected with their trainers from anywhere.
-      </p>
-    </section>
-  </main>
+      nav ul {
+        display: flex;
+        gap: 2rem;
+        list-style: none;
+      }
 
-  <footer>
-    <p><strong>FitPro Gym</strong></p>
-    <p>10, T.P. Kailsasam Road, Hanumanthangara, Bengaluru, 560019</p>
-    <p>Owner: Anusha</p>
-    <p>Phone: +91 7483329076</p>
-    <p>Email: support@fitprogym.site</p>
-    <div class="text-sm text-gray-400 mt-3">
-      Registered under Karnataka Shops & Establishments Act.<br />
-      © 2025 FitPro Gym. All rights reserved.
-    </div>
-  </footer>
+      nav ul li a {
+        color: white;
+        text-decoration: none;
+        font-weight: bold;
+        transition: color 0.3s;
+      }
 
-  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-  <script>
-    AOS.init({
-      duration: 1000,
-      once: true
-    });
-  </script>
-</body>
+      nav ul li a:hover {
+        color: #00ffd5;
+      }
+
+      main {
+        flex: 1;
+        padding: 2rem;
+        text-align: center;
+      }
+
+      .hero {
+        margin-top: 2rem;
+        margin-bottom: 3rem;
+      }
+
+      .hero h1 {
+        font-size: 3.5rem;
+        margin-bottom: 1rem;
+        animation: fadeInDown 1s ease;
+      }
+
+      .hero p {
+        font-size: 1.3rem;
+        max-width: 800px;
+        margin: 0 auto 2rem;
+      }
+
+      .cta-button {
+        padding: 0.8rem 2rem;
+        font-size: 1rem;
+        background-color: #00ffd5;
+        color: #000;
+        border: none;
+        border-radius: 8px;
+        cursor: pointer;
+        font-weight: bold;
+        transition: background-color 0.3s;
+      }
+
+      .cta-button:hover {
+        background-color: #00cfa2;
+      }
+
+      .screenshots {
+        display: flex;
+        gap: 1rem;
+        flex-wrap: wrap;
+        justify-content: center;
+        margin-top: 2rem;
+      }
+
+      .screenshot {
+        max-width: 250px;
+        width: 100%;
+        border: 3px solid #fff;
+        border-radius: 12px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+        transition: transform 0.3s;
+      }
+
+      .screenshot:hover {
+        transform: scale(1.05);
+      }
+
+      #about-business {
+        background: rgba(255, 255, 255, 0.1);
+        padding: 3rem 1rem;
+        margin-top: 4rem;
+        border-radius: 10px;
+        max-width: 1000px;
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      #about-business h2 {
+        font-size: 2.5rem;
+        margin-bottom: 1rem;
+      }
+
+      #about-business p {
+        font-size: 1.1rem;
+        max-width: 900px;
+        margin: auto;
+        line-height: 1.6;
+      }
+
+      footer {
+        background-color: rgba(0, 0, 0, 0.9);
+        padding: 2rem;
+        text-align: center;
+        font-size: 0.95rem;
+      }
+
+      footer p {
+        margin-bottom: 0.5rem;
+      }
+
+      @keyframes fadeInDown {
+        from {
+          opacity: 0;
+          transform: translateY(-40px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      #optin-form {
+        max-width: 500px;
+        margin: 50px auto;
+        padding: 30px;
+        background: #f8f9fa;
+        border-radius: 16px;
+        box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+        text-align: center;
+      }
+
+      #optin-form h2 {
+        margin-bottom: 24px;
+        font-size: 24px;
+        color: #2c3e50;
+      }
+
+      #optin-form form {
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+      }
+
+      #optin-form input[type="tel"] {
+        padding: 14px 18px;
+        border-radius: 10px;
+        border: 1px solid #ced4da;
+        font-size: 16px;
+        outline: none;
+        transition: border-color 0.3s, box-shadow 0.3s;
+      }
+
+      #optin-form input[type="tel"]:focus {
+        border-color: #4dabf7;
+        box-shadow: 0 0 0 3px rgba(77, 171, 247, 0.2);
+      }
+
+      #optin-form .cta-button {
+        padding: 14px 18px;
+        border: none;
+        border-radius: 10px;
+        background-color: #38b000;
+        color: white;
+        font-weight: 600;
+        font-size: 16px;
+        cursor: pointer;
+        transition: background-color 0.3s;
+      }
+
+      #optin-form .cta-button:hover {
+        background-color: #2d8900;
+      }
+
+      #optin-status {
+        font-size: 14px;
+        margin-top: 12px;
+        min-height: 20px;
+        color: black;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <img src="/public/logo.png" alt="FitPro Gym Logo" class="logo" />
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero" data-aos="fade-up">
+        <h1>Welcome to FitPro Gym</h1>
+        <p>
+          Transform your fitness journey with smart tools, expert guidance, and
+          a supportive community. FitPro Gym empowers members, trainers, and
+          admins through our all-in-one fitness platform.
+        </p>
+        <button
+          class="cta-button"
+          onclick="window.location.href='contact.html'"
+        >
+          Join Now
+        </button>
+      </section>
+
+      <section class="screenshots" data-aos="zoom-in-up">
+        <img src="/public/app_1.png" alt="Screenshot 1" class="screenshot" />
+        <img src="/public/app_2.png" alt="Screenshot 2" class="screenshot" />
+        <img src="/public/app_3.png" alt="Screenshot 3" class="screenshot" />
+        <img src="/public/app_4.png" alt="Screenshot 4" class="screenshot" />
+      </section>
+
+      <section id="about-business" data-aos="fade-up">
+        <h2>About FitPro Gym</h2>
+        <p>
+          FitPro Gym is a Bangalore-based fitness platform dedicated to
+          transforming lives through personalized training, member-focused
+          dashboards, and trainer-admin tools. Located at
+          <strong
+            >10, T.P. Kailasam Road, Hanumanthnagar, Bangalore - 560019</strong
+          >, we are committed to promoting health, strength, and community. Our
+          app allows members to track their progress, access workouts, and stay
+          connected with their trainers from anywhere.
+        </p>
+      </section>
+
+      <section id="optin-form" data-aos="fade-up">
+        <h2>Get Started on WhatsApp</h2>
+        <form id="whatsappOptinForm">
+          <input
+            type="tel"
+            id="phone"
+            name="phone"
+            placeholder="Enter 10-digit mobile number"
+            required
+          />
+          <button type="submit" class="cta-button">Opt In on WhatsApp</button>
+        </form>
+        <p id="optin-status"></p>
+      </section>
+    </main>
+
+    <footer>
+      <p><strong>FitPro Gym</strong></p>
+      <p>10, T.P. Kailsasam Road, Hanumanthangara, Bengaluru, 560019</p>
+      <p>Owner: Anusha</p>
+      <p>Phone: +91 7483329076</p>
+      <p>Email: support@fitprogym.site</p>
+      <div class="text-sm text-gray-400 mt-3">
+        Registered under Karnataka Shops & Establishments Act.<br />
+        © 2025 FitPro Gym. All rights reserved.
+      </div>
+    </footer>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      document
+        .getElementById("whatsappOptinForm")
+        .addEventListener("submit", async function (e) {
+          e.preventDefault();
+
+          const rawPhone = document.getElementById("phone").value.trim();
+          const cleanedPhone = rawPhone.replace(/\D/g, ""); // Remove + and non-digits
+          const phone = cleanedPhone.startsWith("91")
+            ? cleanedPhone
+            : `91${cleanedPhone}`;
+
+          const status = document.getElementById("optin-status");
+          status.textContent = "Submitting...";
+
+          try {
+            const response = await fetch(
+              "https://flndefkorrpmfcgcygvv.supabase.co/functions/v1/gupshup-optin",
+              {
+                method: "POST",
+                headers: {
+                  "Content-Type": "application/json",
+                  Authorization:
+                    "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImZsbmRlZmtvcnJwbWZjZ2N5Z3Z2Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NTE3NzUyMDIsImV4cCI6MjA2NzM1MTIwMn0.Hq41b9I7M84W-Mr59i-vUbtilIKGvM0Wr8TABQ46N3s",
+                },
+                body: JSON.stringify({ phone }),
+              }
+            );
+
+            if (response.ok) {
+              status.textContent = "✅ Opt-in request sent successfully!";
+            } else {
+              const err = await response.text();
+              status.textContent = "❌ Failed: " + err;
+            }
+          } catch (error) {
+            status.textContent = "❌ Error: " + error.message;
+          }
+        });
+    </script>
+
+    <script>
+      AOS.init({
+        duration: 1000,
+        once: true,
+      });
+    </script>
+  </body>
 </html>
